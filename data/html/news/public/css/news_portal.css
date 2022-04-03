@@ -1,0 +1,346 @@
+/*
+@font-face {
+    font-family: 'Roboto';
+    src: url('/Assets/Font/Roboto-Regular.tff'),url('/Assets/Font/Roboto-Bold.tff');
+}
+*/
+body{
+    background-image: url('/Assets/Images/BG\ 1.jpg');
+    font-size: 1em;
+}
+img{
+    max-width: 100%;
+    vertical-align: baseline;
+}
+a:hover{
+    text-decoration: none;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+.main{
+    position: relative;
+}
+.bg-green{
+    background-color: #97C455 !important;
+}
+.border-bottom{
+    border-bottom: 1px solid #d8d8d8;
+}
+.chat{
+    position: absolute;
+    bottom: 0;
+    right: 300px;
+}
+.divider-title{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.divider-line{
+    border-bottom: 2px solid #97C455;
+    vertical-align: baseline;
+}
+.ml-2{
+    margin-left: 10px !important;
+}
+.mt-2{
+    margin-top:10px;
+}
+.mr-2{
+    margin-right: 10px;
+}
+.mr-3{
+    margin-right: 15px;
+}
+.mt-4{
+    margin-top: 20px !important;
+}
+.mt-5{
+    margin-top: 25px !important;
+}
+.mb-0{
+    margin-bottom: 0px !important;
+}
+.mb-2{
+    margin-bottom:10px !important;
+}
+.mb-3{
+    margin-bottom:15px !important;
+}
+.mb-5{
+    margin-bottom:25px !important;
+}
+.p-0{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.pr-3{
+    padding-right: 15px !important;
+}
+.pl-3{
+    margin-left: 15px !important;
+}
+.pb-3{
+    padding-bottom: 15px;
+}
+.text-bold{
+    font-weight: 600;
+}
+.text-black{
+    color: #333 !important;
+}
+.text-green{
+    color:#97C455;
+}
+.subtitle{
+    color: #006352;
+}
+.subtitle-2{
+    color: #97C455;
+}
+.thumbnail-article{
+    width: 100%;
+}
+.thumbnail-article img{
+    height: 450px;
+    max-width: 100%;
+}
+.toggleMenuLeft{
+    margin-top:500px;
+    background: #97C455;
+    color: #fff;
+    width: 100%;
+    height: 80px;
+    border: unset;
+    border-radius: unset;
+}
+.back-to-top{
+    -webkit-writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: end;
+    position: absolute;
+    height: 100%;
+    bottom: 40px;
+    left: 75px;
+    text-align: left;
+}
+.back-to-top a{
+    color: #333;
+}
+.back-to-top img{
+    -webkit-writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: end;
+}
+.contentBody{
+    margin-left: 150px;
+    position: relative;
+}
+.navTop{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    background: unset;
+    padding: 40px 60px;
+}
+.navTop .nav-item a:hover{
+    color: #fff !important;
+    border-bottom: 2px solid #fff;
+}
+.banner{
+    position: relative;
+    color: #fff;
+    height: 600px;
+}
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(255,255,255,0) 1%, rgba(0,0,0,.5) 100%);
+}
+.banner img{
+    object-fit: cover;
+    height: 600px;
+}
+.banner .information{
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+}
+.banner .information .text{
+    border-left: 3px solid;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+.banner .information h1{
+    font-size: 4em;
+}
+.banner .information h1,
+.banner .btnReadMore{
+    font-weight: 600;
+}
+.btnReadMore{
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 8px 15px;
+}
+.btnReadMore:hover{
+    color: #333;
+    background-color: #fff;
+    text-decoration: none;
+}
+.input-sign-up-email{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid #fff;
+    background: unset;
+}
+.input-sign-up-email::placeholder{
+    color: #fff;
+}
+.btn-sign-up-email{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #fff;
+    height: 45px;
+    border: none;
+    width: 115px;
+}
+.app-footer .container {
+    height: 100%;
+}
+
+.app-footer .footer-section-1{
+    background: #968777;
+    color: #fff;
+    height: 400px;
+    padding-top: 80px;
+}
+.app-footer .footer-section-1 a{
+    color: #fff;
+}
+.app-footer .footer-section-2{
+    background: #97C455;
+    padding: 15px;
+    color: #fff;
+    position: relative;
+}
+.language{
+    text-align: center;
+    margin-top: 300px;
+}
+.choose-language{
+    width: 150px;
+}
+.trending{
+    padding: 0px 20px;
+    border-left: 1px solid #d8d8d8;
+    width: 55%;
+}
+.trending .subtitle{
+    padding: .5rem 1rem;
+}
+.trending a{
+    color: #333;
+}
+.trending .nav-link{
+    padding: 15px 0px;
+}
+.trending .nav-link span{
+    margin-right: 10px;
+}
+.articles .date-publish{
+    -webkit-writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: end;
+    font-size: .7em;
+    margin-right: 5px;
+}
+.comment-share{
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    padding: 10px 0px;
+}
+.photo-profile-comment img{
+    width: 50px;
+    margin-right: 20px;
+}
+.carousel-caption{
+    text-align: left;
+}
+.carousel-inner{
+    height: 600px;;
+}
+.navbar-brand:hover{
+    color: #fff !important;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #fff;
+}
+.navbar-light .navbar-brand{
+    color: #fff;;
+}
+.navbar-left .nav-item{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.navbar-right a:hover{
+    border-bottom: unset !important;
+}
+.navbar-right .nav-item{
+    margin-right: 15px;
+}
+.nav-left{
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 150px;
+}
+.dropdown-toggle::after{
+    content: unset;
+}
+.navbar-expand-lg .navbar-nav{
+    align-items: center;
+}
+.nav-expand{
+    position: absolute;
+    top: 0;
+    left: 150px;
+    z-index: 3;
+    width: 300px;
+    background: url(/Assets/Images/BG\ 1.jpg);
+    height: 100%;
+    margin-top: -20px;
+    padding-top: 135px;
+    text-align: left;
+}
+.nav-expand .nav{
+    display: inline-table;
+}
+.nav-expand a{
+    color: #333;
+}
+.nav-expand a:hover{
+    color: #333;
+    border-bottom: 2px solid #97C455;
+    display: block;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #97C455;
+    border-color: #97C455;
+}.btn-primary:hover 
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
+    color: #fff;
+    background-color: #97C455;
+    border-color: #97C455;
+}
+.btn-primary:hover, .btn-primary.focus, .btn-primary:focus{
+    color: #fff;
+    background-color: #006352;
+    border-color: #006352;
+}

@@ -1,0 +1,52 @@
+version: '3'
+services:
+  mysql:
+    container_name: mysql_news
+    image: mariadb
+    networks:
+      - app-network
+    ports:
+      - 3306:3306
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_DATABASE=news_portal
+      - MYSQL_USER=bmg
+      - MYSQL_PASSWORD=bmg
+    restart: always
+
+  laravel_news:
+    container_name: laravel_news
+    image: php:fpm-alpine3.15
+    volumes:
+      - ./data/html/news:/var/www/html
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - app-network
+    depends_on:
+      - mysql
+    links:
+      - mysql
+  nginx:
+    container_name: nginx_news
+    image: nginx:alpine
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./data/html/news:/var/www/html
+      - ./data/html/news/public/storage:/var/www/html/public/storage
+      - ./nginx/logs:/var/log/nginx/
+    networks:
+      - app-network
+    ports:
+      - 80:80
+    links:
+      - laravel_news
+    depends_on:
+      - laravel_news
+#Docker Networks
+networks:
+  app-network:
+    driver: bridge
